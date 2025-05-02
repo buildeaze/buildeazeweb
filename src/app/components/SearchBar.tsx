@@ -33,8 +33,7 @@
 //     );
 //   }
   
-import Link from "next/link";
-import { Home, Search, ChevronDown } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react';
 
 export default function SearchBar() {
     return (
