@@ -169,11 +169,12 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-gradient-to-b from-[#F9F6F2] to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900">What Our Clients Say</h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-[#1A472A] mb-2">What Our Clients Say</h2>
+          <div className="w-20 h-1 bg-[#DAA520] mx-auto mb-6"></div>
+          <p className="mt-4 text-xl text-[#4F4F4F] max-w-3xl mx-auto">
             Hear from homeowners who have successfully built their dream homes with BuildEaze
           </p>
         </div>
@@ -182,22 +183,22 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-2xl shadow-md transition hover:shadow-lg"
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl ring-1 ring-[#E5DDD2] hover:-translate-y-1"
             >
-              <div className="flex items-start mb-4">
-                <Quote className="text-blue-100 w-10 h-10 flex-shrink-0" />
-                <p className="text-gray-700 text-base leading-relaxed ml-3">
+              <div className="flex items-start mb-6">
+                <Quote className="text-[#DAA520] w-10 h-10 flex-shrink-0 opacity-50" />
+                <p className="text-[#2F2F2F] text-base leading-relaxed ml-4">
                   {testimonial.comment}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-gray-100 flex items-center">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white">
+              <div className="pt-4 border-t border-[#E5DDD2] flex items-center">
+                <div className="w-12 h-12 bg-[#1A472A] rounded-full flex items-center justify-center text-white shadow-lg">
                   <User size={20} />
                 </div>
-                <div className="ml-3">
-                  <h4 className="font-semibold text-md text-gray-900">{testimonial.name}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.location}</p>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-md text-[#2F2F2F]">{testimonial.name}</h4>
+                  <p className="text-[#6F6F6F] text-sm">{testimonial.location}</p>
                 </div>
               </div>
             </div>
